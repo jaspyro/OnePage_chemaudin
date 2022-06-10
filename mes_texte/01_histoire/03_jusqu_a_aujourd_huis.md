@@ -1,0 +1,3 @@
+Lors des grand comflit mondiaux, le village de chemaudin fut épargnier. Lors de cette periode chemaudon était habité par une centaine d'habitants vivant notament des produits de la terre.
+
+Avec le développement industriel de la franche comté, le village voit s'amorcer une augmentation de sa population, du faite de sa proximiter avec Besançon et la présence avantageuse d'axe de communication. en 1975, une zone industrielle fut créer et une demie-douzaines d'entreprise si implémentèrees.  
