@@ -15,4 +15,4 @@ Une bibliothéque situer à coter de l'école permet un accèes a internet.
 
 Chemaudin peut conter sur sa zone industriel situer en périphérie du village mais aussi sur sa sortie d'autoroute se qui a permis à de nombreus entreprise de choisir Chemaudin et vaux pour y installer leur locaux.
 
-Chemaudin et vau xet jumeler au village de Moscheleben un village allemand.  
+Chemaudin et vaux et jumeler au village de Moscheleben un village allemand.  
