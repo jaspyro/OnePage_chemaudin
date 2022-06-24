@@ -6,64 +6,361 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Chemaudin</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- header -->
-    <div id="header">
+    <div id="header" class="div_taille">
         <div id="header_link">
-            <p id="histoire"><a>histoire</a></p>
-            <p id="patrimoine"><a>patrimoine</a></p>
-            <p id="geographie"><a>situation géographique</a></p>
+                <p id="link_histoire"><a href="#" class="header_link">histoire</a></p>
+                <p id="link_patrimoine"><a href="#" class="header_link">patrimoine</a></p>
+                <p id="link_geographie"><a href="#" class="header_link">situation géographique</a></p>
         </div>
-
-        <div id="titre_chapitre">
-            <div id="origin" class="titre">
-                <!-- img d'illustration -->
-                <img>
-                <h2> De l'origin de chemaudin ... </h2>
-                <!-- img "voir plus" -->
-                <img class="voir_plus">
-                <!-- img "voir moins" -->
-                <img class="voir_moins">
-            </div>
-
-            <div id="traverser" class="titre">
-                <img>
-                <h2> ...À sa traverser des âges... </h2>
-                <img class="voir_plus">
-                <img class="voir_moins">
-            </div>
-
-            <div id="aujourd'huis" class="titre">
-                <img>
-                <h2> ...jusqu'a aujourd'huis. </h2>
-                <img class="voir_plus">
-                <img class="voir_moins">
-            </div>
-
-            <div id="Arnoux" class="titre">
-                <img>
-                <h2> Denise Arnoux, une figure révolutionnaire </h2>
-                <img class="voir_plus">
-                <img class="voir_moins">
-            </div>
-
-            <div id="chemaudin" class="titre">
-                <img>
-                <h2> Chemaudin aujourd'huis </h2>
-                <img class="voir_plus">
-                <img class="voir_moins">
-            </div> 
-        </div>
-    </div>
     
-    <!-- first div -->
-    <div id="histoire">
 
+        <div id="titre_chapitre" class="grid_titre_chapitre">
+            <div id="ensemble_origin" class="div_histoire current_chapter">
+                    <div class="milieux">
+                        <div id="origin" class="titre border">
+                            <!-- img d'illustration -->
+                            <img src="mes_image/gaullois.png" alt="Portrait d'un gaulloi" width="200px" height="160px">
+                            <h2> De l'origin de chemaudin ... </h2>
+                        </div>
+                    </div>
+                    <div id="origin_switch" class="switch">
+                        <div class="voir_plus none">
+                            <div class="cercle">
+                                <div class="first_bar bar"></div>
+                                <div class="second_bar bar"></div>
+                            </div>
+                        </div>
+                        <div class="voir_moins">
+                            <div class="cercle">
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div id="ensemble_traverser"  class="div_histoire pointer other_chapter">
+                <div class="milieux">
+                    <div id="traverser" class="titre border">
+                        <img src="mes_image/chevalier.png" alt="Portrait d'un chevalier" width="200px" height="160px">
+                        <h2> ... À sa traverser des âges ... </h2>
+                    </div>
+                </div>
+                <div id="traverser_switch" class="switch">
+                    <div class="voir_plus">
+                        <div class="cercle">
+                            <div class="first_bar bar"></div>
+                            <div class="second_bar bar"></div>
+                        </div>
+                    </div>
+                    <div class="voir_moins none">
+                        <div class="cercle">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ensemble_aujourd_huis"  class="div_histoire pointer other_chapter">
+                <div class="milieux"> 
+                    <div id="aujourd_huis" class="titre border">
+                        <img src="mes_image/locomotives.png" alt="Une locomotive" width="200px" height="160px">
+                        <h2> ... jusqu'a aujourd'huis. </h2>
+                    </div>
+                </div>
+                <div id="aujourd_huis_switch" class="switch">
+                    <div class="voir_plus">
+                        <div class="cercle">
+                            <div class="first_bar bar"></div>
+                            <div class="second_bar bar"></div>
+                        </div>
+                    </div>
+                    <div class="voir_moins none">
+                        <div class="cercle">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ensemble_Arnoux"  class="div_histoire pointer other_chapter">
+                <div class="milieux"> 
+                    <div id="Arnoux" class="titre border">
+                        <img src="mes_image/bataille.png" alt="Représentation d 'une bataille c'étant dérouler pendant la révolution française" width="200px" height="160px">
+                        <h2> Denise Arnoux, une figure révolutionnaire </h2>
+                    </div>
+                </div>
+                <div id="Arnoux_switch" class="switch">
+                    <div class="voir_plus">
+                        <div class="cercle">
+                            <div class="first_bar bar"></div>
+                            <div class="second_bar bar"></div>
+                        </div>
+                    </div>
+                    <div class="voir_moins none">
+                        <div class="cercle">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ensemble_chemaudin"  class="div_histoire pointer other_chapter">
+                <div class="milieux">
+                    <div id="chemaudin" class="titre border">
+                        <img src="mes_image/marriane.png" alt="La fontaine présente aux centre de chemaudin" width="200px" height="160px">
+                        <h2> Chemaudin aujourd'huis </h2>
+                    </div>
+                </div> 
+                <div id="chemaudin_switch" class="switch">
+                    <div class="voir_plus">
+                        <div class="cercle">
+                            <div class="first_bar bar"></div>
+                            <div class="second_bar bar"></div>
+                        </div>
+                    </div>
+                    <div class="voir_moins none">
+                        <div class="cercle">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- first div -->
+    <div id="histoire" class="div_taille">
+        <div id="origin" class="ensemble_histoire grid_histoire">
+            <titre class="grid_titre_histoire titre_histoire">De l’origin de chemaudin ...</titre>
+
+            <div class="paragraphe_histoire grid_text_histoire">
+                <p id="paragraphe_histoire_1">
+                    On trouve les premières dates d'occupation remontent au Néolithique et sera développé lors de l'âge du bronze.<br>
+                    Une voie gallo-romaine a servi au tracé de la départementale RD 11 qui traverse le village.
+                <p>
+                <img src="mes_image/illustration_préhistorique.png" width="200px" height="321px">
+                <p id="paragraphe_histoire_2">
+                    Connu dans un premier temps sous l'orthographe "Chemadein" au XIIème,<br>
+                    le village et  prébende du chapitre métropolitain de Saint Etienne de Besançon.<br>
+                    Ils doivent verser un revenu à l'église éclésiastique de Saint étienne de Besançon.<br>
+                    le chapitre exerce entre autre les pouvoir de haute justice, mainmorte et four banal.<br>
+                    Les habitants du château de montferrand doivent y assurer le guet et la montre d'armes.
+                </p>
+            </div>
+            
+            <div id="button_lexique_origin" class="grid_button_lexique button_lexique pointer">
+                <div class="cercle_lexique"><img src="mes_image/asking.png"></div>
+                <div class="underline"><p>Lexique</p></div>
+            </div>
+        </div>
+        <div class="grid_lexique lexique none">
+            <div class="retour_lexique pointer">
+                <div class="croix">
+                    <div class="bar croix_frist_bar"></div>
+                    <div class="bar croix_second_bar"></div>
+                </div>
+            </div>
+            <h2 class="titre">Lexique</h2>
+                <h3 class="titre_def">prébende :</h3>
+                <p class="def">
+                Un Revenu attribué à une fonction définie ou à une charge.<br>
+                Dans la religion catholique, il s'agit du revenu destiné à payer l'entretien d'un membre du clergé ou d'un laïc.
+                </p>
+
+                <h3 class="titre_def">clergé :</h3>
+                <p class="def">
+                L'ensemble des membres qui compose la religion chrétienne autre que les laïcs.
+                </p>
+
+                <h3 class="titre_def">Laïc :</h3>
+                <p class="def">
+                Un laïc est un chrétien qui n'a pas de responsabilité religieuse.
+                </p>
+
+                <h3 class="titre_def">Saint Etienne de Besançon :</h3>
+                <p class="def">
+                Ancienne cathédrale, située sur l'actuelle site de la citadelle de Besançon.
+                </p>
+
+                <h3 class="titre_def">pouvoir de haute justice :</h3>
+                <p class="def">
+                Au moyen-âge, La justice seigneuriale et trés importante en arbitrant les conflits entre paysans et le seigneur qui possède les terres. La justice seigneuriale est un moyen efficace et rapide de rendre la justice mais perd peu à peu de sa valeur au fil du renforcement du pouvoir royal jusqu'à la révolution qui la supprimera définitivement.<br>
+                Ils existe trois niveaux de juridiction seigneuriale :
+                </p>
+                <dl>
+                    <dt class="titre_def">La haute justice :</dt>
+                    <dd class="def">permet à un seigneur de pouvoir juger tout type d'affaire allant jusqu'a la peine capitale, cependant, il lui faut la confirmation du juge royal avant que la peine sa mise a execution.</dd>
+                    
+                    <dt class="titre_def">la moyenne justice :</dt>
+                    <dd class="def">permet à un seigneur de juger des rixes, injures et vols. il ne peut prononcer une peine de mort. la justice moyenne a un rôle citoyen notamment l'apposition des scellés, l'inventaire des biens des mineurs la nominations des tuteurs</dd>
+                    
+                    <dt class="titre_def">la basse justice :</dt>
+                    <dd class="def">permet à un seigneur de juger des affaires de faible gravité notamment les rentes, les héritages sur son domaine, les exhibitions de contrats... Il s'occupe des délits et amendes de faibles valeurs inférieur à 7 sols 6 deniers (12 dernier valent 1 sol)</dd>
+                </dl>
+
+                <h3 class="titre_def">le pouvoir de Mainmortes :</h3>
+                <p class="def">La mainmortes et le droit d'hériter du seigneur de l'ensemble des bien dont disposait un serf à sa mort, dans le but d'empêcher que ces bien passent a des personne extérieur à la seigneurie. Si pendant sa vie le serf avait la libre utilisation de ces biens, il ne pouvait pas faire de testament.<br>
+                <br>
+                <pan >Dès le XII siècle</pan>, la mainmorte s'allégera. Dans de nombreuses régions, le seigneur ne prenait qu'une seule bête ou un meuble ou recevait une taxe des héritiers.<br>
+                <br>
+                </pan>Dès le XVII siècle</pan>, le droit disparue en france, hormis en <span>FRANCHE-COMTÉ</pan>, rattachée à la France sous louis XIV, où l'église purent jouir de ce droit jusqu'à la révolution où elle fut abolie par un décret de _1790_.</p>
+                
+                <h3 class="titre_def">les communautés taisible :</h3>
+                <p class="def">Les communautés taisibles ont été un moyen de contourner le droit de mainmortes. Une même famille qui se devaient de vivre ensemble sous le même toit. Le droit de Mainmortes ne s'applique qu'à la mort du dernier membre de la famille. Cependant la communauté taisible soit admise il fallait réunir deux condition :</p>
+                <ul>
+                    <li> les héritiers soit des serfs comme le défunt.</li>
+                    <li> que tous les vivants soit rester en société jusqu'à la mort du défunt il suffisait du départ d'un seul membre pour mettre fin à la société.</li>
+                </ul>
+
+                <h3 class="titre_def">four banal :</h3>
+                <p class="def">Le four banal est un four à bois, dont le seigneur est dans l'obligation de mettre à disposition de ses sujets et d'entretenir l'installation et sont accès. Ils sont dans l'obligation de payer une taxe à l'utilisation. Ban provient du mot banna qui en vieux germain signifie commandement.</p>
+                
+                <h3 class="titre_def">la montre d'armes :</h3>
+                <p class="def">Créer à l'initiative du duc de bourgogne pour faciliter la défense du territoire, Les montres d'armes sont des listes d'hommes en âges de se battre pendant le moyen-age.</p>
+        </div>
+        <!-- second div -->
+        <div id="traverser" class="grid_histoire ensemble_histoire ">
+            <titre class="grid_titre_histoire titre_histoire">... À sa traverser des âges ...</titre>
+
+            <div class="grid_text_histoire paragraphe_histoire">
+                <p>Le village ne résistera pas a la guerre de 10 ans et sera progressivement reconstruit aprés l'annexion de la franche comté par louis XIV, en 1678.</br>
+                    Le village fut alors essentiellemnt agricole et se composait notament de 77 habitants qui élevait des annimaux, récoltait des céréales et de la vigne. Une tuilerie fut construite dans la deuxième moitié du XVIII ème.</br>
+                    Lors de la révolution, un événement connu sous le nom de "l'insurrection de Chemaudin" qui vit la mobilisation d'une partie du village dans l'objectif de récupérer son ancien vicaire qui était conduit sous la garde de gendarme dans les prisons de dôle.
+                </p>
+            </div>
+
+            <div id="button_lexique_traverser" class="grid_button_lexique button_lexique pointer">
+                <div class="cercle_lexique"><img src="mes_image/asking.png"></div>
+                <div class="underline"><p>Lexique</p></div>
+            </div>   
+        </div>
+        <div class="grid_lexique lexique none">
+            <div class="retour_lexique pointer">
+                <div class="croix cercle">
+                    <div class="bar croix_frist_bar"></div>
+                    <div class="bar croix_second_bar"></div>
+                </div>
+            </div>
+            <h2 class="titre">Lexique</h2>
+                <h3 class="titre_def">la guerre de 10 ans</h3>
+                <p class="def">La guerre de 10 ans, est une guerre qui a vue s'affronter les franc-comtois et les français.</br>
+                    à l'origin, le comté de Bourgogne était sous la protection du roi d'espagne Philippe II, dans un premier temps la franche comté de part sa position et ces nombreux traiter de paix avec ses voisins suisse la mis dans une sécuriter relative.</br>
+                    Le 17 janvier 1595, le roi de france déclare la guerre a l'espagne et remporte de nombreux combat notament à fontaine-Française, actuel Côte d'or de la région bourgogne franche comté.</br>
+                    En 1598, la paix de Vervins est signié entre la france et l'espagne, elle permet la restitution des territoire conquis par les deux puissance eurpoénne.</br>
+                    Le 27 mai 1636, ronpant un traiter de neutraliter qui avait été convenue en 1522 entre la france et la franche-comté. Le roi Louis XIII appuyer par le cardinale de Richelieux déclara la guerre a la franche comté.</br>
+                    Elle dura de 1636 jusqu'en 1644, laissant la région annihiler, de part la guerre et ces conséquences notament la peste et la famine. La région fut déserter par une part importante des survivant.</br>
+                    On dénombrais en 1614 entre 405 000 et 410 000 personnes vivant en franche comté. En 1657, soit 13 ans après la fin des combats, il restait 160 000 habitants soit une baisse de 60 %
+                </p>
+        </div>
+        <!-- third div -->
+        <div id="aujourd_huis" class="grid_histoire ensemble_histoire ">
+            <titre class="grid_titre_histoire titre_histoire">... jusqu'a aujourd'huis.</titre>
+
+            <div class="grid_text_histoire paragraphe_histoire">
+                <p>Lors des grand comflit mondiaux, le village de chemaudin fut épargnier. Lors de cette periode chemaudon était habité par une centaine d'habitants vivant notament des produits de la terre.</br>
+                    Avec le développement industriel de la franche comté, le village voit s'amorcer une augmentation de sa population, du faite de sa proximiter avec Besançon et la présence avantageuse d'axe de communication. en 1975, une zone industrielle fut créer et une demie-douzaines d'entreprise si implémentèrees.</p>
+            </div>
+        </div>
+    
+        <!-- fourth div -->
+        <div id="Arnoux" class="grid_histoire ensemble_histoire ">
+            <titre class="grid_titre_histoire titre_histoire">Denise Arnoux, une figure révolutionnaire</titre>
+
+            <div class="grid_text_histoire paragraphe_histoire">
+                <p>Née à Chemaudin le 19 décembre 1756, Denise Arnoux et une figure majeur local de la révolution française qui fut la première maîtresse d'écoles connu du village où elle enseignait déjà avant la révolution.<br>
+                    A Besançon, le "club des amis de la Constitution" lutte farouchement contre l'église en renplacent tous les nom des rue d'origin religieuse et les renplacent par des noms botaniques. Un movement paralléle est fondée à la fin de 1791, "la Société des femmes republicaines de Besançon". Denise Arnoux appartient a se mouvement "patriotes" puis "républicain".<br>
+                    Son père Simon Arnoux est un manoeuvrier illetré qui travaille pour les plus riches agriculteurs. l'enfance de Denise Arnoux, sous le signe de la pauvreter, ne lui a probablement pas permit d'aller a l'école car rare étaient les maneuvrier pouvant payer l'école a leur enfants. Le faite qu'elle soit devenue maîtresse d'école laisse présager qu'elle avait un esprit vif. Elle restera célibataire à 35 ans fait rare à l'époque.<br>
+                    Malgrer sa position anticléricale, elle n'était probablement pas athé puisque elle est devenue marraine en 1787.<br>
+                    Elle dénonce l'omnipotence du clergé qui n'hésite pas à trainer la communauté en procès et à la l'écrasé sous les redevance: dîme, poule, corvées ect ...<br>
+                    Le 26 novembre 1791, elle est révoquée par le procureur-syndic de la municipalité pour avoir refuser de de conduire ses élève a la messe et au catéchisme.<br>
+                    Après sont renvoie on ignore ce qu'elle est devenue, mais elle ne reviendra pas à Chemaudin.
+                </p>
+            </div>
+
+            <div id="button_lexique_Arnoux" class="grid_button_lexique button_lexique pointer">
+                <div class="cercle_lexique"><img src="mes_image/asking.png"></div>
+                <div class="underline"><p>Lexique</p></div>
+            </div>
+        </div>
+        <div class="grid_lexique lexique none">
+            <div class="retour_lexique pointer">
+                <div class="croix cercle">
+                    <div class="bar croix_frist_bar"></div>
+                    <div class="bar croix_second_bar"></div>
+                </div>
+            </div>
+            <h2 class="titre">quelque précisions :</h2>
+            <h3 class="titre_def">le salaire d'un maître d'école :</h3>
+            <p class="def">L'enseigniante était à la fois payer par la commune a hauteur de 36 livre par an et à la fois par les parents en fonction de l'aprentissage des enfants. Ils devaient payer 4 sous apprendre a lire, 5 sous pour apprendre à écrire et 6 sous pour apprendre l'arithmétique.</p>
+                
+            <h3 class="titre_def">l'insurrection de chemaudin :</h3>   
+            <p class="def">En 1795, une centaine de chemaudinois attaquent six gendarme qui avait pour mission de conduire Gabriel Bourgeois, ancien vicaire du village vers les geôles de Dijon. Cette événement est connu sous le nom de "l'insurrection de Chemaudin".</p>
+                
+            <h3 class="titre_def">pendant la révolution française :</h3>  
+            <p class="def">La révolution française voit s'affronter deux vision de la france :</p>
+            <ul>
+                <li>Une partie "peu patriote" de la population traditionaliste et hostile à la constitution civile du clergé.</li>
+                <li>Une partie "patriote" qui a une tendance à vouloir faire évoluer la situation notament en séparent la religion et le pouvoir.</li>
+            </ul>   
+            
+            <h2 class="titre">quelque défintion :</h2>
+                
+            <h3 class="titre_def">le procureur-syndic </h3>
+            <p class="def">Apparu en 1789, il a été mise en place par Jacques-Guillaume Thouret. Le procureur-syndic est un role apparus pendant la Révolution française. il a pour devoir de représenter le pouvoir executif au niveau d'un département ou d'un district et ont la charge d'agir pour les intérêts du district ou du département.</p>
+                
+            <h3 class="titre_def">manoeuvre </h3>
+            <p class="def">Personne qui effectue des taches simples pour aider le personnel de l'exploitation agricole. Ils s'agit d'un métier peut rémunérer encore aujourd'huis.</p>
+                
+            <h3 class="titre_def">anticlérical </h3>
+            <p class="def">Opposition au pouvoir et à l'influence de la religion dans la vie publique.</p>
+                
+            <h3 class="titre_def">marraine  </h3>
+            <p class="def">Personne de sexe feminin qui, traditionnellement, est la pour aider à transmettre les valeurs chrétiennes et recueillir l'enfant en cas de décès ou probleme avec les parents de ce dernier.<br>
+            Cette tradition et purement chrétienne mais c'est aussi dévelloper dans le civil.</p>
+                
+            <h3 class="titre_def">omnipotence </h3>
+            <p class="def">Puissance absolue</p>
+                
+            <h3 class="titre_def">redevance </h3>
+            <p class="def">somme qui doit être payée à échéances déterminées.</p>
+                
+            <h3 class="titre_def">catéchisme </h3>
+            <p class="def">Enseignement chrétien qui à pour but d'apprendre la religion chrétienne essentiellement au enfant mais aussi au adulte.</p>     
+        </div>
+        <!-- fifth div -->
+        <div id="chemaudin" class="grid_histoire ensemble_histoire">
+            <titre class="grid_titre_histoire titre_histoire">... À sa traverser des âges ...</titre>
+
+            <div class="grid_text_histoire paragraphe_histoire">
+                <p>Chemaudin comptait 2 016 habitant en 2021.</p>
+
+                <p>plusieur association et clubs sportifs (danse, gym, fléchettes, foot, tennis, judo, ect ...) font de chemaudin une commune très dynamique.</p>
+                    
+                <p>En 2017, chemaudin a fusionner avec vaux les près, cependant les deux anciens villages ont garder leur code postal :</p>
+                <ul>
+                    <li>25 320 pour chemaudin</li>
+                    <li>25 770 pour Vaux les prés</li>
+                </ul>
+
+                <p>l'école Denise Arnoud a été rénover en 2015, allant de la maternelle au CM2.<br>
+                    La mairie de chemaudin a été rénover en 2019, elle a remplacer l'ancienne école primaire devenue non conforme au norme en matiére de sécuriter.</p>
+                    
+                <p>actuellement en travaux la salle des faite de Chemaudin va se transformer en micro-créche pour compléter la microcréche les calinoux déjà présente.</p>
+                    
+                <p>Une bibliothéque situer à coter de l'école permet un accèes a internet.</p>
+                    
+                <p>Chemaudin peut conter sur sa zone industriel situer en périphérie du village mais aussi sur sa sortie d'autoroute se qui a permis à de nombreus entreprise de choisir Chemaudin et vaux pour y installer leur locaux.</p>
+                    
+                <p>Chemaudin et vaux et jumeler au village de Moscheleben un village allemand.</p>
+            </div>
+        </div>
+</div>
 
     <!-- second div -->
-    <div id="patrimoine">
+    <div id="patrimoine" class="div_taille">
 
     </div>
 
@@ -82,13 +379,17 @@
 
     <!-- footer -->
     <div id="footer">
-        <img id="logo">
-        <form id="adress_form">
-            <label>entrer votre adresse email...</label>
+        <img id="logo" src="mes_image/blason_chemaudin.png" alt="ancien blason de Chemaudin et Vaux" width="85px" height="112px">
+        <form id="address_form">
+            <label>entrer votre adresse email :</label>
             <input type="email" required>
             <button>newsletter</button>
         </form>
-        <img id="facebook">
+        <div id="facebook">
+            <p>réseaux sociaux :</p>
+            <img src="mes_image/facebook.png" alt="icone facebook" width="30px" height="30px">
+    
+        </div>
     </div>
 
 </body>
