@@ -1,0 +1,584 @@
+/*
+    font-face and root
+*/
+
+@font-face {
+    font-family: "Sherif_italic";
+    src: url(font/DM_Sherif_Display/DMSerifDisplay-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Sherif_regular";
+    src: url(font/DM_Sherif_Display/DMSerifDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: "gudea_bold";
+    src: url(font/Gudea/Gudea-Bold.ttf);
+}
+
+@font-face {
+    font-family: "gudea_italic";
+    src: url(font/Gudea/Gudea-Italic.ttf);
+}
+
+@font-face {
+    font-family: "gudea_regular";
+    src: url(font/Gudea/Gudea-Regular.ttf);
+}
+
+:root {
+    --background:#454C53;
+    --title_color:#8CB3CD;
+    --texte_color:#D19C77;
+    --input_color:#d19d778f;
+}
+
+/*
+    body
+*/
+
+body {
+    margin: 0;
+}
+
+/*
+    header
+*/
+
+#header {
+    background-image: url(mes_image/background_header.png);
+    background-size: cover;
+}
+
+#header #header_link {
+    display: flex;
+    gap: 120px; 
+    justify-content: center;
+    align-items: baseline;
+}
+
+.header_link {
+    color: var(--title_color);
+    font-size: 20px;
+    font-family: "gudea_bold";
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header_link::before {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: var(--title_color);
+    display: block;
+}
+
+.header_link:hover::before {
+    width: 100%;
+    transition: all 0.4s linear;
+}
+
+/*
+    card
+*/
+
+#header #titre_chapitre {  
+    margin-top: -97px;
+    width: 100%;
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 57rem;
+    z-index: 1;
+}
+
+.grid_titre_chapitre {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr 0.2fr 1fr 0.2 1fr 0.2fr 1fr;
+}
+
+#header #titre_chapitre img {
+    border-radius: 15px;
+}
+
+#header #titre_chapitre h2 {
+    display: flex;
+    text-align: center;
+    width: 180px;
+    height: 90px;
+    font-family: "Sherif_italic";
+    font-size: 22px;
+}
+
+#header #titre_chapitre .titre {
+    background: var(--texte_color);
+}
+
+#header #titre_chapitre .switch {
+    display: flex;
+    justify-content: center;
+    margin-top: -8%;
+}
+
+#header #titre_chapitre .div_histoire {
+    width: 200px;
+}
+
+#header #titre_chapitre .milieux {
+    display: flex;
+    justify-content: center;
+}
+
+/*
+    titre_chapitre class
+*/
+
+.border {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.current_chapter {
+    transition: transform 500ms linear;
+    transform: translate(0px, 40px);
+}
+
+.other_chapter {
+    transition: transform 500ms linear;
+    transform: translate(0,0);
+}
+
+.first_bar {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.second_bar {
+    grid-column: 1;
+    grid-row: 1;
+    transform: rotate(90deg);
+}
+
+.cercle {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr;
+    width: 40px;
+    height: 40px;
+    background-color: var(--title_color);
+    border-radius: 50%;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 20%;
+    margin-top: 18px;
+    margin-left: 7.5px;
+}
+
+/*
+    titre chapitre placement
+*/
+
+/*  origin  */
+
+#header #titre_chapitre #ensemble_origin {
+    grid-column: 1;
+}
+
+#header #titre_chapitre #origin {
+    grid-column: 1;
+}
+
+#header #titre_chapitre #origin_switch {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/*  traverser  */
+
+#header #titre_chapitre #ensemble_traverser {
+    grid-column: 3;
+}
+ 
+#header #titre_chapitre #traverser {
+    grid-column: 3;
+}
+
+#header #titre_chapitre #traverser_switch {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/*  aujourd'huis  */
+
+#header #titre_chapitre #ensemble_aujourd_huis {
+    grid-column: 5;
+}
+
+#header #titre_chapitre #aujourd_huis {
+    grid-column: 5;
+}
+
+#header #titre_chapitre #aujourd_huis_switch {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/*  Arnoux  */
+
+#header #titre_chapitre #ensemble_Arnoux {
+    grid-column: 7;
+}
+
+#header #titre_chapitre #Arnoux {
+    grid-column: 7;
+}
+
+#header #titre_chapitre #Arnoux_switch {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+/*  chemaudin  */
+
+#header #titre_chapitre #ensemble_chemaudin {
+    grid-column: 9;
+}
+
+#header #titre_chapitre #chemaudin {
+    grid-column: 9;
+}
+
+#header #titre_chapitre #chemaudin_switch {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+/*
+    div histoire placement
+*/
+
+#histoire {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: var(--background);
+
+}
+
+.grid_histoire {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 0.2fr 2fr;
+    grid-template-rows: 1fr 1.46fr 1fr;
+}
+
+.grid_titre_histoire {
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.grid_text_histoire {
+    grid-column: 2;
+    grid-row: 2/4;
+}
+
+.grid_button_lexique {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+    align-self: center;
+}
+
+.grid_lexique {
+    grid-column: 1;
+    grid-row: 1/4;
+}
+
+.annimation_text {
+    transition: all 1s linear;
+    transform: translateY(-50rem);
+    opacity: 0;
+}
+
+.annimation_text_reverse {
+    transition: all 1s linear;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/*
+    histoire
+*/
+
+#histoire .titre_histoire {
+    color: var(--title_color);
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding-top: 240px;
+}
+
+/*  origin  */
+
+#histoire #origin .paragraphe_histoire {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.56fr 1fr;
+}
+
+#histoire #origin .paragraphe_histoire #paragraphe_histoire_1 {
+    display: flex;
+    justify-content: center;
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+#histoire #origin .paragraphe_histoire img {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 50%;
+}
+
+#histoire #origin .paragraphe_histoire #paragraphe_histoire_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/*
+    class for text
+*/
+
+.paragraphe_histoire {
+    color: var(--texte_color);
+    font-size: 20px;
+    line-height: 124%;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/*
+    class for lexique
+*/
+
+.button_lexique {
+    display: grid;
+    grid-template-columns: 25px 25px 55px;
+    grid-template-rows: 25px 25px;
+    margin-left: 15px;
+}
+  
+.cercle_lexique {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: var(--title_color);
+}
+
+.cercle_lexique img {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.underline {
+    grid-column: 2/4;
+    grid-row: 2;
+    width: 80px;
+    height: 20px;
+    border-radius: 25px;
+    background-color: var(--title_color);
+    margin-left: 5px;
+}
+
+.underline p {
+    margin-left: 5px;
+    margin-top: -3px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--background);
+    font-family: "Sherif_regular";
+}
+
+.grid_lexique {
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.lexique {
+    background-color: var(--background);
+    overflow: scroll;
+}
+
+.lexique .titre {
+    color: var(--title_color);
+    font-family: "Sherif_regular";
+}
+
+.lexique .titre_def {
+    color: var(--title_color);
+    font-family: "gudea_bold";
+}
+
+.lexique .def {
+    color: var(--texte_color);
+    font-family: "gudea_regular";
+}
+
+.lexique li {
+    color: var(--texte_color);
+    font-family: "gudea_regular";
+}
+
+.annimation_lexique {
+    opacity: 0;
+    position: relative;
+    transition: all 0.5s linear;
+}
+
+.annimation_lexique_reverse {
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+
+.croix {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr;
+    width: 40px;
+    height: 40px;
+    border-color: var(--texte_color);
+    border-radius: 50%;
+    border: solid var(--texte_color);
+    position: relative;
+}
+
+.croix_frist_bar {
+    grid-column: 1;
+    grid-row: 1;transform: rotate(45deg);
+}
+
+.croix_second_bar {
+    grid-column: 1;
+    grid-row: 1;
+    transform: rotate(-45deg);
+}
+
+.retour_lexique {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 2rem;
+    top: 62rem;
+    z-index: 1;
+}
+
+/*
+    div patrimoine
+*/
+
+.div_taille {
+    width: 100%;
+    height: 100vh;
+}
+
+/*
+    footer
+*/
+
+#footer {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 130px;
+    background-color: var(--background);
+}
+
+#footer #logo {
+    grid-column: 1;
+    grid-row: 1/3;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+#footer #address_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/4;
+    grid-row: 1;
+}
+
+#footer #address_form label {
+    color: var(--title_color);
+}
+
+#footer #address_form input {
+    grid-column: 2;
+    grid-row: 1;
+    border-style: none;
+    width: 560px;
+    height: 42px;
+    border-radius: 55px;
+    border-style: solid;
+    background-color: var(--input_color);
+    border-color: var(--title_color);
+    margin-left: 20px;
+}
+
+#footer #address_form button {
+    grid-column: 3;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: black;
+    color: var(--texte_color);
+    text-decoration: underline;
+    font-size: 20px;
+    margin-left: 20px;
+
+}
+
+#footer #facebook {
+    display: flex;
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer #facebook p {
+    margin-right: 10px;
+}
+
+/*
+    class 
+*/
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.pointer {
+    cursor: pointer;
+}
